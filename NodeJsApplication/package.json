@@ -1,0 +1,23 @@
+{
+  "name": "NodeJsApplication",
+  "version": "1.0.0",
+  "keywords": [
+    "util",
+    "functional",
+    "server",
+    "client",
+    "browser"
+  ],
+  "author": "doripark",
+  "contributors": [],
+  "dependencies": {
+    "@slack/client": "^3.8.1",
+    "async": "^2.1.4",
+    "cheerio": "^0.22.0",
+    "express": "^4.14.0",
+    "lodash": "^4.17.3",
+    "request": "^2.79.0",
+    "slack-client": "^2.0.6",
+    "string-similarity": "^1.1.0"
+  }
+}
