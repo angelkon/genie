@@ -28,7 +28,7 @@ conn.on('ready', function () {
         }).stderr.on('data', function (data) {
             console.log('STDERR:\n' + data);
         });
-        stream.end('ls -l\nexit\n');
+        stream.end('sudo apt-get update -y && sudo apt-get upgrade -y\nexit\n');
     });
 }).connect({
     host: hostname,
