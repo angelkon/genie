@@ -12,7 +12,7 @@ router.post('/', function (req, res) {
     var sess;
     sess = req.session;
 
-    fs.readFile(__dirname + "/../data/user.json", "utf8", function (err, data) {
+    fs.readFile(__dirname + "/../../data/user.json", "utf8", function (err, data) {
         var users = JSON.parse(data);
         var username = req.body['username'];
         var password = req.body['password'];

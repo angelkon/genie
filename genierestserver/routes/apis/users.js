@@ -8,14 +8,14 @@ var router = express.Router();
 var fs = require('fs');
 
 router.get('/', function (req, res) {
-    fs.readFile(__dirname + "/../data/user.json", 'utf8', function (err, data) {
-        console.log(data);
+    fs.readFile(__dirname + "/../../data/user.json", 'utf8', function (err, data) {
+        // console.log(data);
         res.end(data);
     });
 });
 
 router.get('/:username', function (req, res) {
-    fs.readFile(__dirname + "/../data/user.json", 'utf8', function (err, data) {
+    fs.readFile(__dirname + "/../../data/user.json", 'utf8', function (err, data) {
         var users = JSON.parse(data);
         res.json(users[req.params.username]);
     });
@@ -37,7 +37,7 @@ router.post('/:username', function (req, res) {
     }
 
     // LOAD DATA & CHECK DUPLICATION
-    fs.readFile(__dirname + "/../data/user.json", 'utf8', function (err, data) {
+    fs.readFile(__dirname + "/../../data/user.json", 'utf8', function (err, data) {
         var users = JSON.parse(data);
         if (users[username]) {
             // DUPLICATION FOUND
@@ -51,7 +51,7 @@ router.post('/:username', function (req, res) {
         users[username] = req.body;
 
         // SAVE DATA
-        fs.writeFile(__dirname + "/../data/user.json",
+        fs.writeFile(__dirname + "/../../data/user.json",
                 JSON.stringify(users, null, '\t'), "utf8", function (err, data) {
             result = {"success": 1};
             res.json(result);
@@ -74,13 +74,13 @@ router.put('/:username', function (req, res) {
     }
 
     // LOAD DATA
-    fs.readFile(__dirname + "/../data/user.json", 'utf8', function (err, data) {
+    fs.readFile(__dirname + "/../../data/user.json", 'utf8', function (err, data) {
         var users = JSON.parse(data);
         // ADD/MODIFY DATA
         users[username] = req.body;
 
         // SAVE DATA
-        fs.writeFile(__dirname + "/../data/user.json",
+        fs.writeFile(__dirname + "/../../data/user.json",
                 JSON.stringify(users, null, '\t'), "utf8", function (err, data) {
             result = {"success": 1};
             res.json(result);
@@ -92,7 +92,7 @@ router.put('/:username', function (req, res) {
 router.delete('/:username', function (req, res) {
     var result = {};
     //LOAD DATA
-    fs.readFile(__dirname + "/../data/user.json", "utf8", function (err, data) {
+    fs.readFile(__dirname + "/../../data/user.json", "utf8", function (err, data) {
         var users = JSON.parse(data);
 
         // IF NOT FOUND
@@ -107,7 +107,7 @@ router.delete('/:username', function (req, res) {
         delete users[req.params.username];
 
         // SAVE FILE
-        fs.writeFile(__dirname + "/../data/user.json",
+        fs.writeFile(__dirname + "/../../data/user.json",
                 JSON.stringify(users, null, '\t'), "utf8", function (err, data) {
             result["success"] = 1;
             res.json(result);

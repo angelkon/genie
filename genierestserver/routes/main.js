@@ -11,15 +11,15 @@ module.exports = function (app, fs) {
         });
     });
     
-    var users = require('../apis/users');
+    var users = require('./apis/users');
     app.use('/users', users);
     
-    var sessions = require('../apis/sessions');
+    var sessions = require('./apis/sessions');
     app.use('/sessions', sessions);
     
-    var system = require('../apis/system');
+    var system = require('./apis/system');
     app.use('/system', system);
     
-    var ssh = require('../apis/ssh');
+    var ssh = require('./apis/ssh');
     app.use('/ssh', ssh);
 };

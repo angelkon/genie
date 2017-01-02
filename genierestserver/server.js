@@ -22,4 +22,4 @@ app.use(session({
     saveUninitialized: true
 }))
 
-var router = require('./router/main')(app, fs);
+var router = require('./routes/main')(app, fs);

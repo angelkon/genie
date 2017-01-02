@@ -3,9 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="Personal Project">
-            <file>file:/home/doripark/genie/genierestserver/apis/system.js</file>
-            <file>file:/home/doripark/genie/genierestserver/apis/sessions.js</file>
-            <file>file:/home/doripark/genie/genierestserver/apis/ssh.js</file>
+            <file>file:/home/doripark/genie/genierestserver/router/apis/sessions.js</file>
+            <file>file:/home/doripark/genie/genierestserver/router/apis/system.js</file>
+            <file>file:/home/doripark/genie/genierestserver/router/apis/ssh.js</file>
+            <file>file:/home/doripark/genie/genierestserver/router/main.js</file>
+            <file>file:/home/doripark/genie/genierestserver/router/apis/users.js</file>
             <file>file:/home/doripark/genie/genierestserver/package.json</file>
         </group>
     </open-files>
