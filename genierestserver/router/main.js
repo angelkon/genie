@@ -16,4 +16,10 @@ module.exports = function (app, fs) {
     
     var sessions = require('../apis/sessions');
     app.use('/sessions', sessions);
+    
+    var system = require('../apis/system');
+    app.use('/system', system);
+    
+    var ssh = require('../apis/ssh');
+    app.use('/ssh', ssh);
 };
