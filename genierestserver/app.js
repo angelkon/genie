@@ -1,4 +1,5 @@
 // issue1 comment add
+// GN-12345 add comment
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
